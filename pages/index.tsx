@@ -1,3 +1,5 @@
+import { NextPage } from 'next';
+
 function Home() {
 	return <div className="bg-gray-100 flow-root min-h-screen"></div>;
 }
