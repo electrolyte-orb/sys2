@@ -1,6 +1,16 @@
-import { Intro } from '../components';
+import Head from 'next/head';
+import { Navbar, Container } from '../components';
 function Home() {
-	return <div className="bg-gray-100 flow-root min-h-screen"></div>;
+	return (
+		<>
+			<Head>
+				<title>Hello world</title>
+			</Head>
+			<Container>
+				<Navbar />
+			</Container>
+		</>
+	);
 }
 
 export default Home;
