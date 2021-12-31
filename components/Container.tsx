@@ -3,5 +3,9 @@ interface ContainerProps {
 }
 
 export default function Container({ children }: ContainerProps) {
-	return <div className="bg-gray-100 flow-root min-h-screen">{children}</div>;
+	return (
+		<div className="bg-gray-100 flow-root min-h-screen leading-normal">
+			{children}
+		</div>
+	);
 }

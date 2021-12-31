@@ -5,3 +5,4 @@ export { default as Navlist } from './Navlist';
 export { default as Navlogo } from './Navlogo';
 export { default as NavContainer } from './NavContainer';
 export { default as NavItem } from './NavItem';
+export { default as Notice } from './Notice';
