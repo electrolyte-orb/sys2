@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { navItemVariant } from './framer-variants';
 interface NavItemProps {
 	children: React.ReactNode;
 	isActivePage?: boolean;
@@ -10,17 +12,17 @@ export default function NavItem({
 	link,
 }: NavItemProps) {
 	return (
-		<li>
+		<motion.li variants={navItemVariant}>
 			<Link href={link}>
 				<a
 					className={
-						'uppercase text-xs p-2 hover:text-blue-400 transition-colors select-none cursor-pointer' +
+						'uppercase text-xs p-2 hover:text-blue-400 transition-colors select-none cursor-pointer py-2 block' +
 						(isActivePage ? ' text-white' : '')
 					}
 				>
 					{children}
 				</a>
 			</Link>
-		</li>
+		</motion.li>
 	);
 }
