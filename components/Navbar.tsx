@@ -4,11 +4,16 @@ import {
 	XIcon as CloseIcon,
 } from '@heroicons/react/outline';
 import { Navlist, Navlogo, NavItem, NavContainer } from './';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
-	const router = useRouter();
+	const { route, events } = useRouter();
 	const [menuOpen, setMenuOpen] = useState(false); // for mobile devices
+	useEffect(() => {
+		events.on('routeChangeComplete', () => {
+			setMenuOpen(false);
+		});
+	}, []);
 	return (
 		<NavContainer>
 			<Navlogo>
@@ -28,20 +33,17 @@ export default function Navbar() {
 			</button>
 
 			<Navlist setMenuOpen={setMenuOpen} menuOpen={menuOpen}>
-				<NavItem isActivePage={router.route.endsWith('/')} link="/">
+				<NavItem isActivePage={route.endsWith('/')} link="/">
 					Home
 				</NavItem>
-				<NavItem
-					isActivePage={router.route.endsWith('downloads')}
-					link="/downloads"
-				>
+				<NavItem isActivePage={route.endsWith('downloads')} link="/downloads">
 					Downloads
 				</NavItem>
-				<NavItem isActivePage={router.route.endsWith('blogs')} link="/blogs">
+				<NavItem isActivePage={route.endsWith('blogs')} link="/blogs">
 					Blogs
 				</NavItem>
 
-				<NavItem isActivePage={router.route.endsWith('guides')} link="/">
+				<NavItem isActivePage={route.endsWith('guides')} link="/">
 					Guides
 				</NavItem>
 			</Navlist>
