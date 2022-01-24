@@ -16,11 +16,11 @@ export default function NavItem({
 			<Link href={link}>
 				<a
 					className={
-						'uppercase text-xs p-2 hover:text-blue-400 transition-colors select-none cursor-pointer py-2 block' +
+						'uppercase text-xs p-2 lg:hover:text-indigo-400 transition-colors select-none cursor-pointer py-2 block' +
 						(isActivePage ? ' text-white' : '')
 					}
 				>
-					{children}
+					<span className="group-acitve:text-white px-1">{children}</span>
 				</a>
 			</Link>
 		</motion.li>

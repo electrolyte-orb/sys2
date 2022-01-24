@@ -4,14 +4,14 @@ const navVariant: Variants = {
 		height: 0,
 		transition: {
 			duration: 0.3,
-			easings: 'linear',
+			easings: 'backInOut',
 			when: 'afterChildren',
 		},
 	},
 	visible: {
 		height: 'auto',
 		transition: {
-			easings: 'linear',
+			easings: 'backInOut',
 			staggerChildren: 0.1,
 			when: 'beforeChildren',
 		},
