@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { navVariant } from './framer-variants';
 import { Dispatch, SetStateAction } from 'react';
+
 interface NavlistProps {
    children: React.ReactNode;
    menuOpen: boolean;
@@ -28,7 +29,7 @@ export default function Navlist({
                   >
                      <motion.ul
                         transition={{ staggerChildren: 2 }}
-                        className="bg-gradient-to-br from-[#1118278c] to-[#050505c2] backdrop-filter backdrop-blur-lg p-2 divide-y-[0.5px] divide-gray-400 shadow-2xl"
+                        className="bg-gray-700 p-2 divide-y-[0.5px] divide-gray-400 shadow-2xl"
                      >
                         {children}
                         <div className="lg:hidden text-center pt-4">

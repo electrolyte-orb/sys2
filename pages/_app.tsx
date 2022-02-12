@@ -7,11 +7,13 @@ function MyApp({ Component, pageProps }: AppProps) {
    return (
       <>
          <Head>
-            <link
-               rel="stylesheet"
-               href="https://rsms.me/inter/inter.css"
-               id="font-file"
-            />
+            {!(process.env.NODE_ENV == 'development') && (
+               <link
+                  rel="stylesheet"
+                  href="https://rsms.me/inter/inter.css"
+                  id="font-file"
+               />
+            )}
          </Head>
          <Container>
             <Notice />
