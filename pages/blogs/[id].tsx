@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import Head from 'next/head';
 import { getFile } from 'utils/getFile';
 import { getFiles } from 'utils/getDir';
+
 interface BlogProps {
    text: string;
    name: string;

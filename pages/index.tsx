@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ExternalLinkIcon } from '@heroicons/react/outline';
+import ExternalLinkIcon from '@heroicons/react/outline/ExternalLinkIcon';
 import Link from 'next/link';
 export default function Home() {
    return (
