@@ -1,6 +1,8 @@
 import Link from 'next/link';
-import { Container } from 'components';
+import Head from 'next/head';
 import { GetServerSideProps } from 'next';
+
+import { Container } from 'components';
 import { getFiles, getDirs } from 'utils/getDir';
 import FolderIcon from '@heroicons/react/outline/FolderIcon';
 
@@ -22,6 +24,9 @@ export default function index({
 }) {
    return (
       <Container>
+         <Head>
+            <title>All Blogs</title>
+         </Head>
          <h1 className="font-bold text-3xl">
             Here what&apos;s going inside <br /> from insiders.
          </h1>
