@@ -16,7 +16,7 @@ export default function Home() {
                Scalable
                <span className="text-red-400 relative">
                   .
-                  <span className="absolute left-0 top-0 text-xs tracking-normal text-gray-400">
+                  <span className="absolute left-0 top-0 text-xs tracking-normal text-gray-400 z-0">
                      (Vertically)
                   </span>
                </span>

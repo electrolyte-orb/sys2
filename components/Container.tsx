@@ -1,11 +1,9 @@
-interface ContainerProps {
-	children: React.ReactNode;
-}
+import React from 'react';
 
-export default function Container({ children }: ContainerProps) {
-	return (
-		<div className="bg-gray-100 flow-root min-h-screen leading-normal">
-			{children}
-		</div>
-	);
+export default function Container({
+   children,
+}: {
+   children?: React.ReactNode;
+}) {
+   return <div className="m-4">{children}</div>;
 }

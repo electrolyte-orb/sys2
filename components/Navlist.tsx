@@ -24,27 +24,27 @@ export default function Navlist({
                      animate="visible"
                      exit="hidden"
                      className={
-                        'lg:hidden z-10 fixed left-0 w-screen top-[59.5px] overflow-hidden rounded-b-3xl shadow-2xl'
+                        'lg:hidden z-10 fixed left-0 w-full top-[59.5px] overflow-hidden shadow-2xl'
                      }
                   >
                      <motion.ul
                         transition={{ staggerChildren: 2 }}
-                        className="bg-gray-700 p-2 divide-y-[0.5px] divide-gray-400 shadow-2xl"
+                        className="bg-gray-700 p-2 shadow-2xl h-full"
                      >
                         {children}
-                        <div className="lg:hidden text-center pt-4">
+                        <div className="text-center pt-4">
                            <span className="inline-block bg-gray-500 rounded-full w-1/4 h-1"></span>
                         </div>
                      </motion.ul>
                   </motion.div>
                   <div
                      onClick={() => setMenuOpen(!menuOpen)}
-                     className="z-0 w-screen h-screen bg-none fixed top-0 left-0 lg:hidden"
+                     className="z-0 w-screen h-screen bg-none fixed top-0 left-0"
                   ></div>
                </>
             )}
          </AnimatePresence>
-         <div className="hidden lg:block">hellow rld</div>
+         <div className="hidden lg:block">hello world</div>
       </>
    );
 }

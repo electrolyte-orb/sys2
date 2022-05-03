@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useRouter, createRouter } from 'next/router';
 import {
    MenuAlt4Icon as MenuIcon,
    XIcon as CloseIcon,
@@ -9,11 +9,11 @@ import { useEffect, useState } from 'react';
 export default function Navbar() {
    const { route, events } = useRouter();
    const [menuOpen, setMenuOpen] = useState(false); // for mobile devices
-
    useEffect(() => {
       events.on('routeChangeComplete', () => {
          setMenuOpen(false);
       });
+      events.on('routeChangeStart', () => {});
    }, []);
 
    return (
@@ -47,10 +47,6 @@ export default function Navbar() {
             </NavItem>
             <NavItem isActivePage={route.endsWith('blogs')} link="/blogs">
                Blogs
-            </NavItem>
-
-            <NavItem isActivePage={route.endsWith('guides')} link="/">
-               Guides
             </NavItem>
          </Navlist>
       </NavContainer>

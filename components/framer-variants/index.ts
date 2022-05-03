@@ -9,7 +9,7 @@ const navVariant: Variants = {
       },
    },
    visible: {
-      height: 'auto',
+      height: 'calc(100vh - 59.5px)',
       transition: {
          easings: 'backInOut',
          staggerChildren: 0.1,
@@ -30,7 +30,9 @@ const navItemVariant: Variants = {
       opacity: 1,
       transition: {
          type: 'spring',
-         mass: 0.75,
+         // stiffness: 200,
+         // mass: 0.5,
+         bounce: 0.1,
       },
    },
 };

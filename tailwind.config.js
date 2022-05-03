@@ -1,15 +1,15 @@
 module.exports = {
-	mode: 'jit',
-	purge: ['pages/**/*.tsx', 'components/**/*.tsx'],
-	darkMode: false, // or 'media' or 'class'
-	theme: {
-		fontFamily: {
-			sans: ['Inter', 'system-ui'],
-		},
-		extend: {},
-	},
-	variants: {
-		extend: {},
-	},
-	plugins: [],
-};
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    fontFamily: {
+      sans: ['Inter', 'system-ui'],
+    },
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
+}
