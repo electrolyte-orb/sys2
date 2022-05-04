@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { navVariant } from './framer-variants';
 import { Dispatch, SetStateAction } from 'react';
+import MenuIcon from '@heroicons/react/outline/MenuAlt4Icon';
+import CloseIcon from '@heroicons/react/outline/XIcon';
 
 interface NavlistProps {
    children: React.ReactNode;
@@ -15,6 +17,16 @@ export default function Navlist({
 }: NavlistProps) {
    return (
       <>
+         <button
+            className="text-white py-1 px-2 inline-block md:hidden z-10"
+            onClick={() => setMenuOpen(!menuOpen)}
+         >
+            {menuOpen ? (
+               <CloseIcon className="h-5" />
+            ) : (
+               <MenuIcon className="h-5" />
+            )}
+         </button>
          <AnimatePresence>
             {menuOpen && (
                <>
@@ -24,7 +36,7 @@ export default function Navlist({
                      animate="visible"
                      exit="hidden"
                      className={
-                        'lg:hidden z-10 fixed left-0 w-full top-[59.5px] overflow-hidden shadow-2xl'
+                        'md:hidden z-10 fixed left-0 w-full top-[59.5px] overflow-hidden shadow-2xl'
                      }
                   >
                      <motion.ul
@@ -37,14 +49,12 @@ export default function Navlist({
                         </div>
                      </motion.ul>
                   </motion.div>
-                  <div
-                     onClick={() => setMenuOpen(!menuOpen)}
-                     className="z-0 w-screen h-screen bg-none fixed top-0 left-0"
-                  ></div>
                </>
             )}
          </AnimatePresence>
-         <div className="hidden lg:block">hello world</div>
+         <div className="hidden md:block">
+            <ul className="flex space-x-2">{children}</ul>
+         </div>
       </>
    );
 }

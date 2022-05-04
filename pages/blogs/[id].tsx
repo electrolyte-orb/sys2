@@ -4,7 +4,7 @@ import sanitizeHTML from 'sanitize-html';
 import { Container } from 'components';
 import matter from 'gray-matter';
 import Head from 'next/head';
-import { getFile } from 'utils/getFile';
+import getFile from 'utils/getFile';
 import { getFiles } from 'utils/getDir';
 
 interface BlogProps {
@@ -22,6 +22,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       fallback: false,
    };
 };
+
 export const getStaticProps: GetStaticProps = async (context) => {
    const file = await getFile(context.params?.id);
 
@@ -30,6 +31,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
          notFound: true,
       };
    }
+
    const frontMatter = matter(file);
    const HTML = marked.parse(frontMatter.content);
    const sanitized_HTML = sanitizeHTML(HTML);
