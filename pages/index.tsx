@@ -18,7 +18,7 @@ export default function Home() {
                   SYS 2
                </h1>
                <p className="text-lg my-4">
-                  Set of technical guides with best dos and don'ts.
+                  Set of technical guides with best dos and don&apos;ts.
                </p>
                <div className="grid grid-cols-2 gap-2 mt-4 lg:max-w-md">
                   <Link href="/blogs">
