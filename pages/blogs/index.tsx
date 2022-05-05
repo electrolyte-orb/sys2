@@ -27,21 +27,23 @@ export default function index({
          <Head>
             <title>All Blogs</title>
          </Head>
-         <h1 className="font-bold text-3xl">
-            Here what&apos;s going inside <br /> from insiders.
-         </h1>
-         <ul className="my-4 space-y-2">
-            {allFiles.map((blog) => (
-               <li key={blog} className="text-blue-600 underline">
-                  <Link href={'/blogs/' + blog}>{blog}</Link>
-               </li>
-            ))}
-            {allDirs.map((blogGroup) => (
-               <li key={blogGroup} className="text-blue-600 hover:underline">
-                  <FolderIcon className="h-5 inline" /> {blogGroup}
-               </li>
-            ))}
-         </ul>
+         <section className="m-6">
+            <h1 className="font-bold text-3xl text-white">
+               Stay updated, always.
+            </h1>
+            <ul className="my-4 space-y-2">
+               {allFiles.map((blog) => (
+                  <li key={blog} className="text-sky-500 underline">
+                     <Link href={'/blogs/' + blog}>{blog}</Link>
+                  </li>
+               ))}
+               {allDirs.map((blogGroup) => (
+                  <li key={blogGroup} className="text-sky-500 hover:underline">
+                     <FolderIcon className="h-5 inline" /> {blogGroup}
+                  </li>
+               ))}
+            </ul>
+         </section>
       </Container>
    );
 }
