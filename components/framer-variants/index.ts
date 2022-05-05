@@ -9,7 +9,7 @@ const navVariant: Variants = {
       },
    },
    visible: {
-      height: 'calc(100vh - 59.5px)',
+      height: 'calc(100vh - 64px)',
       transition: {
          easings: 'backInOut',
          staggerChildren: 0.2,

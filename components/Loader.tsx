@@ -10,7 +10,5 @@ export default function Notice() {
    }, []);
    return loading ? (
       <div className="fixed top-0 z-50 bg-blue-500 animate-pulse h-1 w-screen"></div>
-   ) : (
-      <></>
-   );
+   ) : null;
 }

@@ -53,7 +53,7 @@ export default function Blog({ name, text }: BlogProps) {
             <title>{name} - Sys2</title>
          </Head>
          <div
-            className="prose"
+            className="prose prose-invert m-6"
             dangerouslySetInnerHTML={{
                __html: text,
             }}

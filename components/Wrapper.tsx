@@ -4,7 +4,7 @@ interface Wrapper {
 
 export default function Wrapper({ children }: Wrapper) {
    return (
-      <div className="bg-gray-100 flow-root min-h-screen leading-normal">
+      <div className="bg-gray-900 text-gray-300 flow-root min-h-screen">
          {children}
       </div>
    );

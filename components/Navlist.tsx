@@ -18,7 +18,7 @@ export default function Navlist({
    return (
       <>
          <button
-            className="text-white py-1 px-2 inline-block md:hidden z-10"
+            className={'py-1 px-2 inline-block md:hidden z-10 text-white'}
             onClick={() => setMenuOpen(!menuOpen)}
          >
             {menuOpen ? (
@@ -36,7 +36,7 @@ export default function Navlist({
                      animate="visible"
                      exit="hidden"
                      className={
-                        'md:hidden z-10 fixed left-0 w-full top-[59.5px] overflow-hidden shadow-2xl'
+                        'md:hidden z-10 fixed left-0 w-full top-16 overflow-hidden shadow-2xl'
                      }
                   >
                      <motion.ul
@@ -53,7 +53,7 @@ export default function Navlist({
             )}
          </AnimatePresence>
          <div className="hidden md:block">
-            <ul className="flex space-x-2">{children}</ul>
+            <ul className="flex space-x-4">{children}</ul>
          </div>
       </>
    );
